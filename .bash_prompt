@@ -123,7 +123,6 @@ set_prompts() {
 
         svn info &>/dev/null || return;
 
-        branchName="wtf?";
         branchName="$(svn info 2> /dev/null | egrep -o '(tags|branches)/[^/]+|trunk' | egrep -o '[^/]+$')";
 
         echo -e "${1}${branchName}${2}";
