@@ -1,0 +1,12 @@
+amazonwebservices.aws-toolkit-vscode
+anthropic.claude-code
+eamodio.gitlens
+github.vscode-pull-request-github
+hashicorp.terraform
+mermaidchart.vscode-mermaid-chart
+ms-azuretools.vscode-azureterraform
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-python.vscode-python-envs
+vscode-icons-team.vscode-icons

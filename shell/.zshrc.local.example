@@ -1,0 +1,5 @@
+# Copy this file to ~/.zshrc.local and fill in real values.
+# This file is NOT tracked in git — it holds secrets and machine-specific settings.
+
+# AWS profile (optional — set if you use a non-default profile)
+# export AWS_PROFILE=your_profile_here

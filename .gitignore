@@ -1,0 +1,6 @@
+# Machine-local secrets and overrides — never commit these
+*.local
+
+# macOS
+.DS_Store
+*.bak

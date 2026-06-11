@@ -1,0 +1,21 @@
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ~="cd ~"
+
+# List
+alias ls="ls -G"
+alias ll="ls -lAh"
+alias la="ls -A"
+
+# Git shortcuts
+alias gs="git status"
+alias gd="git diff"
+alias gl="git log --oneline --graph --decorate"
+alias hooks-off="git config --local core.hooksPath .git/hooks && echo 'Global hooks disabled for this repo'"
+alias hooks-on="git config --local --unset core.hooksPath && echo 'Global hooks restored for this repo'"
+
+# Misc
+alias reload="source ~/.zshrc"
+alias dotfiles="cd ~/dotfiles"
+alias update="bash ~/dotfiles/update.sh"
