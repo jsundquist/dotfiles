@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "hooks": {},
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "effortLevel": "low"
+}
