@@ -23,6 +23,7 @@ brew "hashicorp/tap/terraform"
 
 # Data
 brew "postgresql@15"
+brew "postgresql@18"
 brew "redis"
 
 # Code quality & diagramming
@@ -37,5 +38,12 @@ brew "yarn"
 
 # GUI apps
 cask "claude-code"
+cask "font-hack-nerd-font"
+cask "font-powerline-symbols"
 cask "pgadmin4"
 cask "sublime-text"
+cask "visual-studio-code"
+
+# npm global packages
+npm "corepack"
+npm "pnpm"

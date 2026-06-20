@@ -35,10 +35,24 @@ echo ""
 echo "==> Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES_DIR/Brewfile"
 
+# Install npm global packages
+if command -v npm &>/dev/null; then
+    echo ""
+    echo "==> Installing npm global packages..."
+    npm install -g corepack pnpm
+fi
+
 # Install VSCode extensions
 if command -v code &>/dev/null; then
     echo ""
     "$DOTFILES_DIR/vscode/install-extensions.sh"
+fi
+
+# Install Terminal profile
+if [[ -f "$DOTFILES_DIR/terminal/MyProfile.terminal" ]]; then
+    echo ""
+    echo "==> Installing Terminal profile..."
+    "$DOTFILES_DIR/install-terminal-profile.sh"
 fi
 
 # Install Oh My Zsh if not present
@@ -60,4 +74,4 @@ echo "  1. Copy shell/.zshrc.local.example to ~/.zshrc.local and fill in secrets
 echo "  2. Set up SSH keys (see README.md)"
 echo "  3. Authenticate GitHub CLI:  gh auth login"
 echo "  4. Run macOS defaults:       bash .macos"
-echo "  5. Restart your terminal"
+echo "  5. Terminal profile 'MyProfile' has been set as default — restart Terminal to apply"
