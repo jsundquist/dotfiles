@@ -7,5 +7,8 @@
     "padding": 0
   },
   "effortLevel": "low",
-  "theme": "dark-ansi"
+  "theme": "dark-ansi",
+  "env": {
+    "CLAUDE_CODE_EXTRA_BODY": "{\"thinking\":{\"type\":\"adaptive\",\"display\":\"summarized\"}}"
+  }
 }
