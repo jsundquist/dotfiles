@@ -39,6 +39,7 @@ brew "corepack"
 # GUI apps
 cask "claude-code"
 cask "font-hack-nerd-font"
+cask "font-meslo-lg-nerd-font"
 cask "font-powerline-symbols"
 cask "pgadmin4"
 cask "sublime-text"

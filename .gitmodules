@@ -1,0 +1,3 @@
+[submodule "knowledgebase"]
+	path = knowledgebase
+	url = git@github.com:jsundquist/knowledgebase.git
