@@ -8,6 +8,18 @@ echo "==> Applying macOS defaults..."
 # General UI/UX
 ###############################################################################
 
+# Dark mode
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
+# Disable press-and-hold accent popup so key repeat works in all apps
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Traditional (non-natural) scroll direction
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Snappier window resize animation
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
@@ -81,12 +93,23 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# New Finder windows open to home folder
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+# Show external drives and removable media on desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
 ###############################################################################
 # Dock
 ###############################################################################
 
 # Set icon size
-defaults write com.apple.dock tilesize -int 48
+defaults write com.apple.dock tilesize -int 38
 
 # Auto-hide the Dock
 defaults write com.apple.dock autohide -bool true
@@ -97,6 +120,19 @@ defaults write com.apple.dock autohide-time-modifier -float 0.5
 
 # Don't show recently opened apps in Dock
 defaults write com.apple.dock show-recents -bool false
+
+# Use scale effect for minimize (snappier than genie)
+defaults write com.apple.dock mineffect -string "scale"
+
+# Minimize windows into their app icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Enable Stage Manager
+defaults write com.apple.WindowManager GloballyEnabled -bool true
+
+# Hot corners: bottom-right = Quick Note (14)
+defaults write com.apple.dock wvous-br-corner -int 14
+defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
 # Screenshots
@@ -119,6 +155,29 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.terminal StringEncodings -array 4
 
 ###############################################################################
+# TextEdit
+###############################################################################
+
+# Default to plain text
+defaults write com.apple.TextEdit RichText -bool false
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
+###############################################################################
+# Printing
+###############################################################################
+
+# Quit Print dialog when finished
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+###############################################################################
+# Time Machine
+###############################################################################
+
+# Don't offer new disks for Time Machine backup
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+###############################################################################
 # Activity Monitor
 ###############################################################################
 
@@ -132,8 +191,12 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Kill affected apps
 ###############################################################################
 
-for app in "Dock" "Finder" "SystemUIServer"; do
+for app in "Dock" "Finder" "SystemUIServer" "TextEdit"; do
     killall "$app" &>/dev/null || true
 done
 
 echo "==> Done. Some changes require a logout or restart to take effect."
+echo ""
+echo "Manual step required:"
+echo "  Battery percentage: System Settings > Control Center > Battery > Show Percentage"
+echo "  (macOS no longer exposes this setting via defaults)"
