@@ -35,11 +35,11 @@ echo ""
 echo "==> Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES_DIR/Brewfile"
 
-# Install npm global packages
-if command -v npm &>/dev/null; then
+# Enable corepack-managed yarn and pnpm
+if command -v corepack &>/dev/null; then
     echo ""
-    echo "==> Installing npm global packages..."
-    npm install -g corepack pnpm
+    echo "==> Enabling corepack (yarn, pnpm)..."
+    corepack enable
 fi
 
 # Install VSCode extensions

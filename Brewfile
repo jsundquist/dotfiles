@@ -33,8 +33,8 @@ brew "plantuml"
 # Search
 brew "elastic/tap/elasticsearch-full"
 
-# Misc
-brew "yarn"
+# Misc — yarn/pnpm managed via corepack; brew installs corepack itself
+brew "corepack"
 
 # GUI apps
 cask "claude-code"
@@ -43,7 +43,3 @@ cask "font-powerline-symbols"
 cask "pgadmin4"
 cask "sublime-text"
 cask "visual-studio-code"
-
-# npm global packages
-npm "corepack"
-npm "pnpm"
