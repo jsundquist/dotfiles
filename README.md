@@ -19,7 +19,7 @@ Then add the public key to your [GitHub account](https://github.com/settings/key
 ### 1. Clone the repo
 
 ```bash
-git clone git@github.com:jsundquist1/dotfiles.git ~/dotfiles
+git clone git@github.com:jsundquist/dotfiles.git ~/dotfiles
 ```
 
 ### 2. Run bootstrap
