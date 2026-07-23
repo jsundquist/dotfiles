@@ -10,6 +10,16 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jsundquist/Projects/knowledgebase/hooks/stop.sh"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
