@@ -4,6 +4,7 @@ eamodio.gitlens
 github.vscode-pull-request-github
 hashicorp.terraform
 mermaidchart.vscode-mermaid-chart
+miragon-gmbh.vs-code-bpmn-modeler
 ms-azuretools.vscode-azureterraform
 ms-python.debugpy
 ms-python.python

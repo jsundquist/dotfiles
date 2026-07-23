@@ -2,9 +2,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 
+DISABLE_MAGIC_FUNCTIONS=true
+
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+unset zle_bracketed_paste
 
 # Source dotfiles
 [[ -f ~/.exports ]] && source ~/.exports

@@ -5,6 +5,7 @@ tap "hashicorp/tap"
 # Core tools
 brew "gh"
 brew "direnv"
+brew "python@3.13"
 brew "python@3.14"
 brew "pipx"
 brew "uv"
@@ -22,7 +23,6 @@ brew "docker-compose"
 brew "hashicorp/tap/terraform"
 
 # Data
-brew "postgresql@15"
 brew "postgresql@18"
 brew "redis"
 

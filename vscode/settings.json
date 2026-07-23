@@ -12,5 +12,7 @@
     "chat.viewSessions.orientation": "stacked",
     "gitlens.ai.model": "vscode",
     "gitlens.ai.vscode.model": "claude-code:claude-sonnet-4.6",
-    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3"
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "vsicons.dontShowNewVersionMessage": true,
+    "python.analysis.typeCheckingMode": "standard"
 }
