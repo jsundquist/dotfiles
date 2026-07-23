@@ -42,8 +42,9 @@ symlink "$DOTFILES_DIR/ssh/config"              "$HOME/.ssh/config"
 symlink "$DOTFILES_DIR/config/gh/config.yml"   "$HOME/.config/gh/config.yml"
 
 # Claude
-symlink "$DOTFILES_DIR/.claude/settings.json"   "$HOME/.claude/settings.json"
-symlink "$DOTFILES_DIR/.claude/statusline.sh"   "$HOME/.claude/statusline.sh"
+for src in "$DOTFILES_DIR/.claude/"*; do
+    symlink "$src" "$HOME/.claude/$(basename "$src")"
+done
 
 # VSCode
 symlink "$DOTFILES_DIR/vscode/settings.json"   "$HOME/Library/Application Support/Code/User/settings.json"
