@@ -2,19 +2,20 @@
 
 ## Knowledgebase
 
-A knowledgebase MCP server (`knowledgebase`) is available in every session. Use it to
-persist discoveries across sessions so future work starts with full context.
+A knowledgebase MCP server (`knowledgebase`) is available in every session. Its contents are
+injected into future session prompts. Save things that would let a future session start working
+immediately — without extra turns to investigate, read files, or reconstruct context. If Claude
+could figure it out in one tool call, don't save it.
 
 ### Save proactively during sessions
 
-Call `kb_add_entry` without being asked when you encounter any of the following:
+Call `kb_add_entry` without being asked when the answer is yes to any of these:
 
-- A non-obvious architectural decision or constraint in the codebase
-- A bug root cause or a fix that required understanding subtle behavior
-- A pattern, convention, or naming scheme specific to the project
-- An external dependency quirk worth remembering
-- An open question or known TODO that isn't tracked elsewhere
-- A user preference or style rule that applied during the session
+- Would a future Claude need multiple tool calls to reconstruct this context?
+- Does this prevent going down a wrong path that looked reasonable?
+- Is this a decision that constrains future choices (so Claude doesn't re-propose rejected approaches)?
+- Is this a gotcha or deviation from documented behavior that would cause wasted investigation?
+- Does this point to the right entry file, module, or pattern for a given type of work in this project?
 
 Use the project name matching the current working directory (e.g. `basename $PWD`).
 Choose the most specific type: `finding`, `decision`, `understanding`, `idea`,
@@ -22,16 +23,22 @@ Choose the most specific type: `finding`, `decision`, `understanding`, `idea`,
 
 ### At the end of a meaningful session
 
-If files were edited, bugs were fixed, or significant decisions were made, do a
-final sweep and save anything not yet captured. Prefer specific, self-contained
-entries over long summaries — one entry per distinct idea is better than one
-entry covering everything.
+Before closing, ask: what would a future Claude get wrong, or waste turns figuring out, without
+this context? Save those things. Don't summarize the session — save the insights. Prefer specific,
+self-contained entries over long summaries — one entry per distinct idea is better than one entry
+covering everything.
 
 ### Do not save
 
+- Anything answerable by reading a single file (file paths, config values, package names, import paths)
+- Confirmations that something works as expected/documented — only the surprising part is worth saving
+- Step-by-step setup sequences that belong in a README, not a KB entry
+- Context that `git log` or `git blame` would surface in one command
 - Trivial exchanges or clarifying questions with obvious answers
-- Information already derivable from reading the code or git history
 - Entries that duplicate what is already in the knowledgebase
+
+**Rule of thumb:** A good KB entry answers "what would Claude need to know to skip a turn?" —
+not "what did we do?" or "what exists?"
 
 ## Coding preferences
 
