@@ -6,6 +6,10 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "==> Bootstrapping new machine..."
 echo ""
 
+# Initialize submodules (e.g. knowledgebase)
+echo "==> Initializing submodules..."
+git -C "$DOTFILES_DIR" submodule update --init --recursive
+
 # Install Homebrew if not present
 if ! command -v brew &>/dev/null; then
     echo "==> Installing Homebrew..."

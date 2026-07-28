@@ -36,6 +36,20 @@ brew "elastic/tap/elasticsearch-full"
 # Misc — yarn/pnpm managed via corepack; brew installs corepack itself
 brew "corepack"
 
+# Required by .claude/statusline.sh
+brew "jq"
+brew "bc"
+
+# CLI quality-of-life
+brew "ripgrep"
+brew "fzf"
+brew "bat"
+brew "tree"
+
+# zsh plugins (sourced directly from shell/.zshrc)
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+
 # GUI apps
 cask "claude-code"
 cask "font-hack-nerd-font"

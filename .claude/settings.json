@@ -1,12 +1,11 @@
 {
-  "model": "claude-sonnet-4-6",
   "hooks": {
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/jsundquist/Projects/knowledgebase/hooks/user_prompt_submit.sh"
+            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/user_prompt_submit.sh"
           }
         ]
       }
@@ -16,18 +15,21 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/jsundquist/Projects/knowledgebase/hooks/stop.sh"
+            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/stop.sh"
           }
         ]
       }
     ]
+  },
+  "permissions": {
+    "defaultMode": "plan"
   },
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 0
   },
-  "effortLevel": "low",
-  "theme": "dark-ansi",
-  "tui": "fullscreen"
+  "effortLevel": "medium",
+  "tui": "fullscreen",
+  "theme": "dark-ansi"
 }
