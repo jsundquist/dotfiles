@@ -47,6 +47,10 @@ not "what did we do?" or "what exists?"
 - No single-line `if` statements — always use curly braces
 - Return statements always on their own line, never inline
 
+## Git
+
+- Default to Conventional Commits with a scope: `type(topic): description` (e.g. `feat(auth):`, `fix(parser):`, `docs(readme):`). If a project-local CLAUDE.md specifies different commit conventions, follow those instead.
+
 ## General
 
 - Keep responses concise; avoid trailing summaries of what you just did
