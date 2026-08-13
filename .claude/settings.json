@@ -19,6 +19,26 @@
           }
         ]
       }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/pre_compact.sh"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/session_end.sh"
+          }
+        ]
+      }
     ]
   },
   "permissions": {
