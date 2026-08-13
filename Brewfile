@@ -11,9 +11,10 @@ brew "pipx"
 brew "uv"
 brew "cookiecutter"
 
-# Node — managed via nvm, but keep for tooling that needs a system node
+# Node — managed via nvm; yarn installed directly
 brew "nvm"
 brew "node"
+brew "yarn"
 
 # Cloud & infra
 brew "awscli"
@@ -21,6 +22,8 @@ brew "colima"
 brew "docker"
 brew "docker-compose"
 brew "hashicorp/tap/terraform"
+brew "helm"
+brew "k3d"
 
 # Data
 brew "postgresql@18"
@@ -51,10 +54,16 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 # GUI apps
+cask "1password"
+cask "camunda-modeler"
 cask "claude-code"
+cask "docker-desktop"
 cask "font-hack-nerd-font"
 cask "font-meslo-lg-nerd-font"
 cask "font-powerline-symbols"
+cask "lm-studio"
+cask "lm-studio-bionic"
+cask "logi-options+"
 cask "pgadmin4"
 cask "sublime-text"
 cask "visual-studio-code"
