@@ -30,3 +30,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # Local overrides: secrets and machine-specific settings (not tracked in git)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jsundquist/.lmstudio/bin"
+# End of LM Studio CLI section
+
