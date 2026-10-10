@@ -1,4 +1,7 @@
 {
+  "permissions": {
+    "defaultMode": "plan"
+  },
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -41,15 +44,17 @@
       }
     ]
   },
-  "permissions": {
-    "defaultMode": "plan"
-  },
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 0
   },
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true
+  },
   "effortLevel": "medium",
   "tui": "fullscreen",
-  "theme": "dark-ansi"
+  "theme": "dark-ansi",
+  "model": "sonnet"
 }
