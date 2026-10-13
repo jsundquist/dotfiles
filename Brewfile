@@ -11,10 +11,9 @@ brew "pipx"
 brew "uv"
 brew "cookiecutter"
 
-# Node — managed via nvm; yarn installed directly
+# Node — managed via nvm; yarn/pnpm via corepack (below)
 brew "nvm"
 brew "node"
-brew "yarn"
 
 # Cloud & infra
 brew "awscli"
