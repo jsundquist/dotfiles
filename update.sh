@@ -33,7 +33,7 @@ if ! git -C "$DOTFILES_DIR" diff --quiet Brewfile vscode/extensions.txt; then
     echo ""
     echo "==> Changes detected, committing..."
     git -C "$DOTFILES_DIR" add Brewfile vscode/extensions.txt
-    git -C "$DOTFILES_DIR" commit -m "update Brewfile and VSCode extensions"
+    git -C "$DOTFILES_DIR" commit -m "chore(deps): update Brewfile and VSCode extensions"
     git -C "$DOTFILES_DIR" push
 else
     echo ""
