@@ -8,7 +8,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/user_prompt_submit.sh"
+            "command": "$HOME/dotfiles/knowledgebase/hooks/user_prompt_submit.sh"
           }
         ]
       }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/stop.sh"
+            "command": "$HOME/dotfiles/knowledgebase/hooks/stop.sh"
           }
         ]
       }
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/pre_compact.sh"
+            "command": "$HOME/dotfiles/knowledgebase/hooks/pre_compact.sh"
           }
         ]
       }
@@ -38,7 +38,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/jsundquist/dotfiles/knowledgebase/hooks/session_end.sh"
+            "command": "$HOME/dotfiles/knowledgebase/hooks/session_end.sh"
           }
         ]
       }
