@@ -10,7 +10,7 @@
     "editor.tabSize": 2,
     "aws.cloudformation.telemetry.enabled": false,
     "chat.viewSessions.orientation": "stacked",
-    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "vsicons.dontShowNewVersionMessage": true,
     "python.analysis.typeCheckingMode": "standard",
     "[mdx]": {
@@ -18,5 +18,9 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.graph.details.location": "auto"
 }
