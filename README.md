@@ -29,7 +29,7 @@ cd ~/dotfiles
 bash bootstrap.sh
 ```
 
-This installs Homebrew, all packages from `Brewfile`, Oh My Zsh, and creates all symlinks.
+This initializes submodules, installs Homebrew, all packages from `Brewfile`, VS Code extensions, the Terminal profile, Oh My Zsh, and creates all symlinks.
 
 ### 3. Set up secrets
 
@@ -65,6 +65,10 @@ bash ~/dotfiles/.macos
 | `~/.npmrc` | `misc/.npmrc` |
 | `~/.ssh/config` | `ssh/config` |
 | `~/.config/gh/config.yml` | `config/gh/config.yml` |
+| `~/.claude/*` (CLAUDE.md, settings.json, statusline.sh, agents/) | `.claude/*` |
+| `~/Library/Application Support/Code/User/settings.json` | `vscode/settings.json` |
+
+Also tracked: `Brewfile`, `vscode/extensions.txt`, `terminal/MyProfile.terminal`, `.macos`, and the `knowledgebase` submodule (hooks used by Claude Code).
 
 ## What's NOT tracked
 
@@ -72,6 +76,7 @@ bash ~/dotfiles/.macos
 - `~/.ssh/*.pem`, `~/.ssh/id_*` — SSH private and public keys
 - `~/.aws/` — AWS credentials
 - `~/.netrc` — stored credentials
+- `~/.ssh/config.local` — machine-specific SSH hosts (included by `ssh/config`)
 
 ---
 
