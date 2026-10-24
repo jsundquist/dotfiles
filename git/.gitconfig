@@ -15,6 +15,21 @@
 [push]
 	default = current
 
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+
+[rerere]
+	enabled = true
+
+[diff]
+	colorMoved = zebra
+
+[branch]
+	sort = -committerdate
+
 [init]
 	defaultBranch = main
 
