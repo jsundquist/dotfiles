@@ -89,10 +89,13 @@ Also tracked: `Brewfile`, `vscode/extensions.txt`, `terminal/MyProfile.terminal`
 
 ## Updating packages
 
+The Brewfile is curated by hand (grouped and commented). Add new packages to it, then:
+
 ```bash
-# Add a new package to Brewfile, then:
 brew bundle --file=~/dotfiles/Brewfile
 
-# Or to snapshot current state:
-brew bundle dump --file=~/dotfiles/Brewfile --force
+# See what's installed but not in the Brewfile (dry run)
+brew bundle cleanup --file=~/dotfiles/Brewfile
 ```
+
+VS Code extensions: `code --list-extensions > ~/dotfiles/vscode/extensions.txt`
