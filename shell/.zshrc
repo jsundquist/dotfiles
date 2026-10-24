@@ -28,10 +28,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+# direnv
+command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
+
 # Local overrides: secrets and machine-specific settings (not tracked in git)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/jsundquist/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
