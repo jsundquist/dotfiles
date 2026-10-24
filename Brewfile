@@ -6,7 +6,6 @@ tap "hashicorp/tap"
 brew "gh"
 brew "direnv"
 brew "python@3.13"
-brew "python@3.14"
 brew "pipx"
 brew "uv"
 brew "cookiecutter"
@@ -40,6 +39,7 @@ brew "elastic/tap/elasticsearch-full"
 # Languages & security tooling
 brew "go"
 brew "zizmor"
+brew "gitleaks"
 
 # Misc — yarn/pnpm managed via corepack; brew installs corepack itself
 brew "corepack"
@@ -53,6 +53,7 @@ brew "ripgrep"
 brew "fzf"
 brew "bat"
 brew "tree"
+brew "tmux"
 
 # zsh plugins (sourced directly from shell/.zshrc)
 brew "zsh-autosuggestions"
