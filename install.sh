@@ -26,7 +26,6 @@ symlink "$DOTFILES_DIR/shell/.zshrc"            "$HOME/.zshrc"
 symlink "$DOTFILES_DIR/shell/.zprofile"         "$HOME/.zprofile"
 symlink "$DOTFILES_DIR/shell/.exports"          "$HOME/.exports"
 symlink "$DOTFILES_DIR/shell/.aliases"          "$HOME/.aliases"
-symlink "$DOTFILES_DIR/shell/.zshrc.local"      "$HOME/.zshrc.local"
 
 # Git
 symlink "$DOTFILES_DIR/git/.gitconfig"          "$HOME/.gitconfig"
