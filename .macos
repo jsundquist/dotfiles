@@ -138,8 +138,11 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 # Screenshots
 ###############################################################################
 
-# Save screenshots to ~/Desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+# Save screenshots to ~/Pictures/Screenshots
+mkdir -p "$HOME/Pictures/Screenshots"
+defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
+defaults write com.apple.screencapture location-screenshot -string "$HOME/Pictures/Screenshots"
+defaults write com.apple.screencapture location-screenrecording -string "$HOME/Pictures/Screenshots"
 
 # Save screenshots as PNG
 defaults write com.apple.screencapture type -string "png"
